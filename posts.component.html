@@ -1,0 +1,58 @@
+<form class="user-add-form" [formGroup]="postForm">
+  <fieldset class="fieldset">
+    <legend class="legend">Enter New User Details</legend>
+    <div class="input-group">
+      <label for="id" class="input-label">User Id <em style="color: rgb(243, 40, 40);">*</em> </label>
+      <input type="number" class="input-control" name="id" placeholder="Enter User Id" id="id" formControlName="id" />
+      <small *ngIf="postForm.get('id').invalid && postForm.get('id').dirty" class="input-error">id is required</small>
+    </div>
+    <div class="input-group">
+      <label for="title" class="input-label">User Title <em style="color: rgb(243, 40, 40);">*</em> </label>
+      <input type="text" class="input-control" name="title" placeholder=" Enter User Title" id="title"
+        formControlName="title" />
+      <small *ngIf="postForm.get('title').invalid && postForm.get('title').dirty" class="input-error">Title is
+        required</small>
+    </div>
+    <div class="input-group">
+      <label for="likes" class="input-label">Likes <em style="color: rgb(243, 40, 40);">*</em></label>
+      <input type="number" class="input-control" name="likes" placeholder=" Enter User Likes" likes="likes"
+        formControlName="likes" />
+      <small *ngIf="postForm.get('likes').invalid && postForm.get('likes').dirty" class="input-error">likes is
+        required</small>
+    </div>
+    <div class="input-group">
+      <label for="hits" class="input-label">Hits <em style="color: rgb(243, 40, 40);">*</em> </label>
+      <input type="number" class="input-control" name="hits" placeholder=" Enter User Hits" hits="hits"
+        formControlName="hits" />
+      <small *ngIf="postForm.get('hits').invalid && postForm.get('hits').dirty" class="input-error">hits is
+        required</small>
+    </div>
+    <div class="input-group">
+      <label for="content" class="input-label">Content <em style="color: rgb(243, 40, 40);">*</em> </label>
+      <textarea class="input-control" name="content" placeholder=" Enter User  Content" content="content" rows="4"
+        formControlName="content"></textarea>
+      <small *ngIf="postForm.get('content').invalid && postForm.get('content').dirty" class="input-error">content is
+        required</small>
+    </div>
+  
+    <div class="input-group align-center">
+      <button type="submit" class="btn" (click)="handlesubmit($event)">Submit</button>
+    </div>
+  </fieldset>
+</form>
+<div class ="likebutton">
+<button class ="btn-danger" (click)="getPostLikes">showlikes</button>
+ <!-- <div class ="showlikes" *ngFor="let post of postitems ">
+  <h1>{{post.likes}}</h1>  -->
+<div class ="showlike">
+
+</div>
+
+</div>
+<div class="posts contanier">
+
+  <app-post *ngFor="let post of posts;index as i;first as isFirst;last as isLast;odd as isOdd;even as isEven"
+    [ngClass]="{ 'posts--odd': isOdd, 'posts--even': isEven }" [post]="post" (postDelete)="handlePostDelete($event)">
+
+  </app-post>
+</div>

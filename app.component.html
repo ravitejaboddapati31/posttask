@@ -1,0 +1,143 @@
+<!-- <div *ngIf="success_msg ; else error_msg "style="background-color: aquamarine;">
+  user is addaed succesfully
+</div>
+<ng-template #error_msg>
+  user error
+</ng-template>-->
+<!--<div *ngIf="success_msg || success_flag"style="background-color: aquamarine;">
+  user is addaed succesfully
+</div>
+<div *ngIf="success_msg && success_flag"style="background-color: aquamarine;">
+  user is addaed succesfully
+</div>
+<div *ngIf="!success_msg"style="background-color: aquamarine;">
+  user is addaed succesfully
+</div>-->
+
+<!--<div *ngIf="success_msg ;then updated_msg;else error msg" style="background-color: aquamarine;">
+  user is addaed succesfully
+</div>
+<ng-template #updated_msg >
+  <h1 style="background-color:yellowgreen ;text-align:center">hello world!</h1>
+</ng-template>
+<ng-template #error_msg>
+  hey you!
+</ng-template>-->
+<!--<h1>ngFor and ngIf</h1>
+<ul type ="none">
+  <li *ngFor="let name of names; index as i ;even as e ;odd as o">
+    <div *ngIf ="e" style ="background-color: green;">    
+   {{i}} {{name.firstname}} ,{{name.secondname}} ,{{name.thirdname}}, {{name.fourthname}}
+    </div>
+    <div *ngIf ="o" style ="background-color: yellow"> 
+      {{i}} {{name.firstname}} {{name.secondname}}  {{name.thirdname}} {{name.fourthname}}
+      </div>
+  </li>
+</ul>-->
+
+<!--<div class="container">
+  <div class ="posts">
+<h1>{{post_title}}</h1>
+<div class ="post">
+<h5 [ngstyle]=(isFirst||isLast)&&{color:'purple'}>{{item.title}}</h5>
+<h5>{{item.likes}}</h5>
+<h5>{{item.content}}</h5>
+
+</div>
+</div>-->
+<!--<form class="user-add-form">
+  <fieldset class="fieldset">
+    <legend class="legend">Enter new user details</legend>
+    <div class="input-group">
+      <label for="name" class="input-label">User name</label>
+      <input
+        type="text"
+        class="input-control"
+        name="name"
+        placeholder="user name here"
+        id="name"
+        [(ngModel)]="name"
+      />
+    </div>
+    <div class="input-group">
+      <label for="age" class="input-label">user age</label>
+      <input
+        type="number"
+        min="1"
+        max="99"
+        class="input-control"
+        name="age"
+        placeholder="user age here"
+        id="age"
+        [(ngModel)]="age"
+      />
+    </div>
+    <div class="input-group">
+      <label for="bio" class="input-label">user bio</label>
+      <textarea
+        class="input-control"
+        name="bio"
+        placeholder="user bio here"
+        id="bio"
+        rows="3"
+        [(ngModel)]="bio"
+      ></textarea>
+    </div>
+    <div class="input-group">
+      <label for="gender" class="input-label">user gender</label>
+      <select
+        class="input-control"
+        name="gender"
+        id="gender"
+        [(ngModel)]="gender">
+        <option value="undefined" disabled selected>Select a gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="prefernottoshare">Prefer not to share</option>
+      </select>
+    </div>
+    <div class="input-group align-center">
+      <button type="submit" class="btn btn-danger">Submit</button>
+    </div>
+  </fieldset>
+</form>-->
+<!--<html>
+
+<head>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="posts">
+
+      <h1 class="one">{{post_title}} </h1>
+      <div>
+
+        <div class="post">
+          <div *ngFor="let item of posts; index as i; first as isFirst; last as isLast;odd as isOdd;even as isEven"
+            [ngClass]="{'posts--odd':isOdd,'posts--even':isEven}">
+            <h4 [ngStyle]="(isFirst||isLast)&&{'color':'purple'}"> Title: {{ item.title }}</h4>
+
+
+            <h2> Likes: {{ item.likes }} <br>
+              Hits:{{ item.hits }}</h2>
+
+            <p>Content: {{ item.content }}</p>
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html> -->
+
+<h1><span class="ht">~</span><span class="one">P</span><span class="two">O</span><span class="three">S</span><span
+    class="four">T</span><span class="five">S</span><span class="ht">~</span></h1>
+<app-posts></app-posts>
+

@@ -1,0 +1,17 @@
+
+<div class="post">
+  <!--[ngClass]="{'posts--odd':isOdd,'posts--even':isEven}">-->
+  <main class=" post_body">
+    <h3>Title: {{ post.title }}</h3>
+    <h1> Likes: {{ post.likes }}</h1>
+    <h1> Hits: {{ post.hits }}</h1>
+    <p class="one"> Content:{{ post.content }}</p>
+  </main>
+  <footer class="post_action">
+    <button class ="btn btn-warning">LIKE</button> 
+    <button class="btn btn-danger" (click)="handelDelete()">Delete</button>
+  
+  </footer>
+  <!-- In button tag  -->
+  <!-- (click)="getlikeitems()" *ngFor="let item of postItems" -->
+  
